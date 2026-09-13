@@ -1,0 +1,44 @@
+Câu hỏi : 
+
+Trong một kho hàng thông minh, có một robot tự động chuyên xử lý nhiệm vụ gom hàng để chuẩn bị vận chuyển. Tại một thời điểm, hệ thống nhận được N kiện hàng, mỗi kiện có khối lượng khác nhau. Robot có khả năng thực hiện thao tác gom đúng hai kiện hàng bất kỳ lại thành một kiện hàng mới — không thể gom 3 hay nhiều kiện một lúc do giới hạn về cánh tay robot, phần mềm và khay xử lý. Sau khi ghép, kiện hàng mới sẽ có khối lượng bằng tổng khối lượng của hai kiện được gom. Robot có thể tiếp tục sử dụng các kiện mới này để ghép tiếp, cho đến khi cuối cùng N kiện hàng ban đầu được gom tất cả lại với nhau và chỉ còn một kiện hàng duy nhất. Mỗi lần robot thực hiện thao tác ghép hai kiện hàng khối lượng avà b, nó tiêu tốn chi phí được tính bằng 5% của tổng khối lượng (a+b).
+Lập kế hoạch điều khiển robot để thực hiện lần lượt các thao tác ghép hàng sao cho:
+· Mỗi lần chỉ ghép đúng hai kiện hàng;
+· Tổng chi phí robot tiêu tốn là nhỏ nhất;
+· Cuối cùng gom được toàn bộ thành 1 kiện hàng duy nhất.
+
+Input
+· Dòng đầu tiên chứa số nguyên dương N (2 ≤ N ≤ 30,000)
+· Trong các dòng tiếp theo ghi N số nguyên dương là khối lượng của N gói hàng, hai số liên tiếp được ghi cách nhau bởi ít nhất một dấu cách hoặc dấu xuống dòng.
+Output
+· Ghi ra phần nguyên của tổng chi phí theo cách thực hiện tính tổng tìm được.
+
+Example 1:
+Input:
+15
+164 835 721 986 401 909 37 957 652 110 868 924 195 227 101 
+Output:
+1442
+
+Example 2:
+Input:
+10
+458 152 865 996 209 867 246 646 135 839 
+Output:
+836
+
+Example 3:
+Input:
+50
+549 195 541 641 105 743 90 218 707 534 183 121 143 382 336 872 969 236 111 235
+137 449 271 338 647 392 78 924 740 561 176 519 865 507 585 901 843 549 331 416
+776 270 850 834 499 717 452 366 702 475 
+Output:
+6555
+
+
+bài này ta sử dụng priority queue --> các hàm hay được sử dụng khi dùng cấu trúc dữ liệu priority queue 
+1. push() --> thêm phần từ , tự điều chỉnh để phần tử lớn nhất nắm ở top
+2. top() --> lấy ra phần từ lớn nhất hay còn gọi là ưu tiên nhất 
+3. pop() --> xóa phần từ ở top 
+4. empty() --> kiểm tra xem có rỗng không 
+5. size() --> số phần tử 
