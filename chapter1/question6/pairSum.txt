@@ -1,0 +1,41 @@
+Given a sequence a[1], a[2], ..., a[n] sorted in ascending order. All elements are distinct, meaning that no two elements have the same value.
+
+Given an integer Q, count M, the number of pairs of indices (i, j) such that:
+
+a[i] + a[j] = Q
+
+Each pair is counted once, so we require 1 <= i < j <= n.
+
+Input
+
+- Line 1: contains two integers n and Q (1 <= n, Q <= 1000000).
+- Line 2: contains n integers a[1], a[2], ..., a[n].
+
+Output
+
+- Write M, the number of pairs of indices (i, j) satisfying a[i] + a[j] = Q.
+
+Example
+
+Input
+
+5 6
+1 2 3 4 5
+
+Output
+
+2
+
+
+có một chút nhầm lần trong quá trình làm bài là : 
+
+Code của bạn chỉ có một lỗi chính ở đoạn này:
+
+long long l = v.begin(), r = v.end() - 1;
+
+v.begin() và v.end() là iterator, không phải chỉ số. Trong khi phía dưới bạn lại dùng:
+
+v[l]
+v[r]
+
+nên l, r phải là index.

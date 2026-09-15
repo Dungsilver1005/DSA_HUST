@@ -1,0 +1,37 @@
+Given a table with n rows (1, 2, ..., n) and m columns (1, 2, ..., m). Each cell (i, j) contains a non-negative integer a(i, j).
+
+Perform a sequence of queries (r1, c1, r2, c2). Each query returns the sum of all elements in the sub-table from row r1 to row r2 and from column c1 to c2.
+
+The query coordinates satisfy:
+1 <= r1 <= r2 <= n
+1 <= c1 <= c2 <= m
+
+Input
+
+- Line 1: contains two integers n and m (1 <= n, m <= 1000).
+- Line i + 1 (i = 1, 2, ..., n): contains the elements in row i of the table.
+- Line n + 2: contains a positive integer Q (1 <= Q <= 100000), the number of queries.
+- Line q + n + 2 (q = 1, 2, ..., Q): contains four integers r1, c1, r2, c2 describing the q-th query.
+
+Output
+
+- Write the result of each query on a separate line, in the same order as the queries are given.
+
+Example
+
+Input
+
+3 4
+1 1 0 1
+1 1 1 0
+0 1 0 0
+3
+2 3 3 4
+1 3 3 4
+2 2 3 4
+
+Output
+
+1
+2
+3
